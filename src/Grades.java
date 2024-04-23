@@ -1,14 +1,15 @@
+package src;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class Grades{
-    private static Map<Integer, String> grades = new HashMap<>();
-    public static void createGradeReport(String[] args){
+    public  Map<Integer, String> grades = new HashMap<>();
+    public void createGradeReport(int id, String grade){
 
-        grades.put(12345, "Info: 1.3");
-        grades.put(54321, "GDM: 2.0; Math:3.7");
+        grades.put(id, grade);
     }
-    public static String getGradeReport(int id){
+    public String getGradeReport(int id){
         return grades.get(id);
     }
 }
