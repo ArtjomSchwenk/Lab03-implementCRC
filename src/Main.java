@@ -6,6 +6,7 @@ public class Main {
         System.out.println("LSD RUNNING");
         System.out.println("==========");
 
+        // Run the unit tests
         UnitTests tests = new UnitTests();
 
         tests.runAllTests();
