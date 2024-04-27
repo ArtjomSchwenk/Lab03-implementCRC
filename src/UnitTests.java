@@ -13,22 +13,22 @@ public class UnitTests {
             return "Test failed";
         }
     }
-    public String unkownStudentChecksGrade(){
+    public String unknownStudentChecksGrade(){
         Student s1 = new Student("James", 54632);
 
         Grades gradeReport = new Grades();
         gradeReport.createGradeReport(12345, "Info: 1.3");
 
-        if (gradeReport.getGradeReport(s1.getId()).equals("Info: 1.3")) {
-            return "Test passed";
+        if (!gradeReport.getGradeReport(s1.getId()).equals("Info: 1.3")) {
+            return "Test passed. Unknown student";
         } else {
-            return "Test failed";
+            return "Test failed. Known student";
         }
     }
     public void runAllTests(){
         String result = "";
         result += "studentChecksGrade: " + studentChecksGrade() + "\n"
-                + "unknownStudentChecksGrade: " + unkownStudentChecksGrade();
+                + "unknownStudentChecksGrade: " + unknownStudentChecksGrade();
 
         System.out.println(result);
     }
