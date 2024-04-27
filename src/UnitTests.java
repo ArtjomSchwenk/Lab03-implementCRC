@@ -13,7 +13,7 @@ public class UnitTests {
             return "Test failed";
         }
     }
-    public String unkownStudentChecksGrade(){
+    public String unknownStudentChecksGrade(){
         Student s1 = new Student("James", 54632);
 
         Grades gradeReport = new Grades();
@@ -28,7 +28,7 @@ public class UnitTests {
     public void runAllTests(){
         String result = "";
         result += "studentChecksGrade: " + studentChecksGrade() + "\n"
-                + "unknownStudentChecksGrade: " + unkownStudentChecksGrade();
+                + "unknownStudentChecksGrade: " + unknownStudentChecksGrade();
 
         System.out.println(result);
     }
