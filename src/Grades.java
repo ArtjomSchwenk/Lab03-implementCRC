@@ -9,7 +9,7 @@ public class Grades{
     public void createGradeReport(int id, String subject, double grade){
         Map<String, Double> studentGrade = new HashMap<>();
         studentGrade.put(subject, grade);
-        grades.put(id, studentGrade);      // TODO: the grade is stored as a string, but it should be stored as a double
+        grades.put(id, studentGrade);
     }
     public String getGradeReport(int id) {
         String grade = grades.get(id).toString();
