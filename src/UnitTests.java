@@ -15,7 +15,7 @@ public class UnitTests {
     }
 
     public String TeacherCreatesGradeReport(){
-        Student s1 = new Student("Dieter", 12345);
+        User s1 = new Student("Dieter", 12345);
         Teacher t1 = new Teacher("Dr. Kleinen", 54321);
 
         Grades gradeReport = new Grades();
