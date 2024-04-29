@@ -12,7 +12,13 @@ public class Grades{
         grades.put(id, studentGrade);
     }
     public String getGradeReport(int id) {
-        String grade = grades.get(id).toString();
-        return grade != null ? grade : "No grade found for student with id " + id;
+        Map<String, Double> studentGrade = grades.get(id);
+        if(studentGrade == null){
+            return "No grade found for student with id " + id;
+        } else {
+            return studentGrade.toString();
+        }
+        //String report = grades.get(id).toString();
+        //return report != null ? report: "No grade found for student with id " + id;
     }
 }
